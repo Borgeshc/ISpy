@@ -7,12 +7,17 @@ using UnityEngine.SceneManagement;
 public class RaycastSelect : MonoBehaviour
 {
     RaycastHit hit;
+    public Image topEye;
+    public Image bottomEye;
     public GameObject reticleHolder;
     public GameObject backpack;
     Image reticleImage;
     bool isSelecting;
     ObjectManager objectManager;
     GameObject button;
+    bool isClosing;
+
+
     void Start()
     {
         objectManager = GameObject.Find("GameManager").GetComponent<ObjectManager>();
@@ -69,14 +74,20 @@ public class RaycastSelect : MonoBehaviour
     IEnumerator Selecting(GameObject pickupable)
     {
         isSelecting = true;
-        while(reticleImage.fillAmount < 1)
+        while (reticleImage.fillAmount < 1)
         {
             reticleImage.fillAmount += .01f;
             yield return new WaitForSeconds(.01f);
         }
         isSelecting = false;
-        pickupable.transform.position= backpack.transform.position;
-        objectManager.RemoveObject(pickupable);
+
+        if (objectManager.RemoveObject(pickupable))
+            pickupable.transform.position = backpack.transform.position;
+        else
+        {
+            //not the item} play the audio
+            print("That is not the item I was looking for");
+        }
     }
 
     IEnumerator Selecting()

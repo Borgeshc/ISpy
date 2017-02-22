@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 4e823f4df973b5449bfeca4ae392e435
+timeCreated: 1487360515
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Back Wall
+    100002: Bed Frame
+    100004: Bed Sheets
+    100006: //RootNode
+    100008: BookShelf
+    100010: CeilingFan
+    100012: CeilingLightFixture
+    100014: Chair
+    100016: Cieling
+    100018: CielingLight
+    100020: ClosetDoor1
+    100022: ClosetDoor2
+    100024: ClosetDoor3
+    100026: ClosetDoor4
+    100028: ClosetDoor5
+    100030: ClosetDoor6
+    100032: ClosetDoor7
+    100034: ClosetDoor8
+    100036: ClosetDoorTrim1
+    100038: ClosetDoorTrim2
+    100040: ClosetHandle1
+    100042: ClosetHandle2
+    100044: ClosetHandle3
+    100046: ClosetHandle4
+    100048: Desk
+    100050: Door
+    100052: DoorHandle
+    100054: DoorTrim
+    100056: Dresser
+    100058: Floor
+    100060: Front Wall
+    100062: Left Wall
+    100064: Pillow
+    100066: Pillow001
+    100068: Right Wall
+    100070: Table
+    100072: Window002
+    100074: Window1
+    100076: WindowGlass1
+    100078: WindowGlass2
+    400000: Back Wall
+    400002: Bed Frame
+    400004: Bed Sheets
+    400006: //RootNode
+    400008: BookShelf
+    400010: CeilingFan
+    400012: CeilingLightFixture
+    400014: Chair
+    400016: Cieling
+    400018: CielingLight
+    400020: ClosetDoor1
+    400022: ClosetDoor2
+    400024: ClosetDoor3
+    400026: ClosetDoor4
+    400028: ClosetDoor5
+    400030: ClosetDoor6
+    400032: ClosetDoor7
+    400034: ClosetDoor8
+    400036: ClosetDoorTrim1
+    400038: ClosetDoorTrim2
+    400040: ClosetHandle1
+    400042: ClosetHandle2
+    400044: ClosetHandle3
+    400046: ClosetHandle4
+    400048: Desk
+    400050: Door
+    400052: DoorHandle
+    400054: DoorTrim
+    400056: Dresser
+    400058: Floor
+    400060: Front Wall
+    400062: Left Wall
+    400064: Pillow
+    400066: Pillow001
+    400068: Right Wall
+    400070: Table
+    400072: Window002
+    400074: Window1
+    400076: WindowGlass1
+    400078: WindowGlass2
+    2300000: Back Wall
+    2300002: Bed Frame
+    2300004: Bed Sheets
+    2300006: BookShelf
+    2300008: CeilingFan
+    2300010: CeilingLightFixture
+    2300012: Chair
+    2300014: Cieling
+    2300016: CielingLight
+    2300018: ClosetDoor1
+    2300020: ClosetDoor2
+    2300022: ClosetDoor3
+    2300024: ClosetDoor4
+    2300026: ClosetDoor5
+    2300028: ClosetDoor6
+    2300030: ClosetDoor7
+    2300032: ClosetDoor8
+    2300034: ClosetDoorTrim1
+    2300036: ClosetDoorTrim2
+    2300038: ClosetHandle1
+    2300040: ClosetHandle2
+    2300042: ClosetHandle3
+    2300044: ClosetHandle4
+    2300046: Desk
+    2300048: Door
+    2300050: DoorHandle
+    2300052: DoorTrim
+    2300054: Dresser
+    2300056: Floor
+    2300058: Front Wall
+    2300060: Left Wall
+    2300062: Pillow
+    2300064: Pillow001
+    2300066: Right Wall
+    2300068: Table
+    2300070: Window002
+    2300072: Window1
+    2300074: WindowGlass1
+    2300076: WindowGlass2
+    3300000: Back Wall
+    3300002: Bed Frame
+    3300004: Bed Sheets
+    3300006: BookShelf
+    3300008: CeilingFan
+    3300010: CeilingLightFixture
+    3300012: Chair
+    3300014: Cieling
+    3300016: CielingLight
+    3300018: ClosetDoor1
+    3300020: ClosetDoor2
+    3300022: ClosetDoor3
+    3300024: ClosetDoor4
+    3300026: ClosetDoor5
+    3300028: ClosetDoor6
+    3300030: ClosetDoor7
+    3300032: ClosetDoor8
+    3300034: ClosetDoorTrim1
+    3300036: ClosetDoorTrim2
+    3300038: ClosetHandle1
+    3300040: ClosetHandle2
+    3300042: ClosetHandle3
+    3300044: ClosetHandle4
+    3300046: Desk
+    3300048: Door
+    3300050: DoorHandle
+    3300052: DoorTrim
+    3300054: Dresser
+    3300056: Floor
+    3300058: Front Wall
+    3300060: Left Wall
+    3300062: Pillow
+    3300064: Pillow001
+    3300066: Right Wall
+    3300068: Table
+    3300070: Window002
+    3300072: Window1
+    3300074: WindowGlass1
+    3300076: WindowGlass2
+    4300000: Back Wall
+    4300002: Left Wall
+    4300004: Right Wall
+    4300006: Front Wall
+    4300008: Floor
+    4300010: Cieling
+    4300012: Door
+    4300014: ClosetDoor1
+    4300016: ClosetDoor2
+    4300018: ClosetDoor3
+    4300020: ClosetDoor4
+    4300022: ClosetDoor5
+    4300024: ClosetDoor6
+    4300026: ClosetDoor7
+    4300028: ClosetDoor8
+    4300030: ClosetHandle2
+    4300032: ClosetHandle1
+    4300034: ClosetHandle4
+    4300036: ClosetHandle3
+    4300038: DoorHandle
+    4300040: ClosetDoorTrim2
+    4300042: ClosetDoorTrim1
+    4300044: DoorTrim
+    4300046: Window1
+    4300048: Window002
+    4300050: WindowGlass2
+    4300052: WindowGlass1
+    4300054: Bed Frame
+    4300056: Bed Sheets
+    4300058: Pillow
+    4300060: Pillow001
+    4300062: Table
+    4300064: BookShelf
+    4300066: Desk
+    4300068: Chair
+    4300070: Dresser
+    4300072: CeilingLightFixture
+    4300074: CeilingFan
+    4300076: CielingLight
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

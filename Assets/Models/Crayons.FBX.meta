@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: e2725b37f2f1a584594e8411357b254b
+timeCreated: 1486513764
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Camera001
+    100004: Camera001.Target
+    100006: Cone001
+    100008: Cone002
+    100010: Cone003
+    100012: Cone004
+    100014: Crayon
+    100016: Crayon001
+    100018: Crayon002
+    100020: Crayon003
+    100022: Crayon004
+    100024: Crayon005
+    100026: Crayon006
+    100028: Crayon007
+    100030: Crayon008
+    100032: Crayon009
+    100034: Crayon010
+    100036: Crayon011
+    100038: Crayon012
+    100040: Crayon013
+    100042: Crayon014
+    100044: Crayon015
+    100046: CrayonBox
+    100048: //RootNode
+    100050: Plane001
+    100052: Plane002
+    100054: Plane003
+    100056: Plane005
+    100058: TPhotometricLight001
+    100060: TPhotometricLight001.Target
+    100062: TPhotometricLight002
+    100064: TPhotometricLight002.Target
+    100066: TPhotometricLight003
+    100068: TPhotometricLight003.Target
+    100070: TPhotometricLight004
+    100072: TPhotometricLight004.Target
+    400000: Box001
+    400002: Camera001
+    400004: Camera001.Target
+    400006: Cone001
+    400008: Cone002
+    400010: Cone003
+    400012: Cone004
+    400014: Crayon
+    400016: Crayon001
+    400018: Crayon002
+    400020: Crayon003
+    400022: Crayon004
+    400024: Crayon005
+    400026: Crayon006
+    400028: Crayon007
+    400030: Crayon008
+    400032: Crayon009
+    400034: Crayon010
+    400036: Crayon011
+    400038: Crayon012
+    400040: Crayon013
+    400042: Crayon014
+    400044: Crayon015
+    400046: CrayonBox
+    400048: //RootNode
+    400050: Plane001
+    400052: Plane002
+    400054: Plane003
+    400056: Plane005
+    400058: TPhotometricLight001
+    400060: TPhotometricLight001.Target
+    400062: TPhotometricLight002
+    400064: TPhotometricLight002.Target
+    400066: TPhotometricLight003
+    400068: TPhotometricLight003.Target
+    400070: TPhotometricLight004
+    400072: TPhotometricLight004.Target
+    2300000: Box001
+    2300002: Cone001
+    2300004: Cone002
+    2300006: Cone003
+    2300008: Cone004
+    2300010: Crayon
+    2300012: Crayon001
+    2300014: Crayon002
+    2300016: Crayon003
+    2300018: Crayon004
+    2300020: Crayon005
+    2300022: Crayon006
+    2300024: Crayon007
+    2300026: Crayon008
+    2300028: Crayon009
+    2300030: Crayon010
+    2300032: Crayon011
+    2300034: Crayon012
+    2300036: Crayon013
+    2300038: Crayon014
+    2300040: Crayon015
+    2300042: CrayonBox
+    2300044: Plane001
+    2300046: Plane002
+    2300048: Plane003
+    2300050: Plane005
+    3300000: Box001
+    3300002: Cone001
+    3300004: Cone002
+    3300006: Cone003
+    3300008: Cone004
+    3300010: Crayon
+    3300012: Crayon001
+    3300014: Crayon002
+    3300016: Crayon003
+    3300018: Crayon004
+    3300020: Crayon005
+    3300022: Crayon006
+    3300024: Crayon007
+    3300026: Crayon008
+    3300028: Crayon009
+    3300030: Crayon010
+    3300032: Crayon011
+    3300034: Crayon012
+    3300036: Crayon013
+    3300038: Crayon014
+    3300040: Crayon015
+    3300042: CrayonBox
+    3300044: Plane001
+    3300046: Plane002
+    3300048: Plane003
+    3300050: Plane005
+    4300000: CrayonBox
+    4300002: Crayon
+    4300004: Crayon001
+    4300006: Box001
+    4300008: Cone001
+    4300010: Cone002
+    4300012: Cone003
+    4300014: Cone004
+    4300016: Plane001
+    4300018: Crayon002
+    4300020: Crayon003
+    4300022: Crayon004
+    4300024: Crayon005
+    4300026: Crayon006
+    4300028: Crayon007
+    4300030: Crayon008
+    4300032: Crayon009
+    4300034: Crayon010
+    4300036: Crayon011
+    4300038: Plane002
+    4300040: Plane003
+    4300042: Plane005
+    4300044: Crayon012
+    4300046: Crayon013
+    4300048: Crayon014
+    4300050: Crayon015
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

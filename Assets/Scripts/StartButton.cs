@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class StartButton : MonoBehaviour
 {
-    public void Scale()
-    {
-        transform.GetComponent<RectTransform>().localScale = new Vector3(.75f, .75f,.75f);
-    }
+    public Animator anim;
 
-    public void UnScale()
+    public void PlayAnim()
     {
-        transform.GetComponent<RectTransform>().localScale = new Vector3(.5f, .5f, .5f);
+        anim.SetBool("Opening", true);
     }
 }

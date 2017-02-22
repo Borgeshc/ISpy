@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Clock : MonoBehaviour
 {
-    float timer = Time.time;
+    float timer;
     public Text clock;
     int hours;
     int minutes;
