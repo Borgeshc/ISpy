@@ -33,16 +33,16 @@ public class Clock : MonoBehaviour
         minutes = Mathf.FloorToInt(timer / 60F);
         seconds = Mathf.FloorToInt(timer - minutes * 60);
 
-        if(seconds % 15 == 0 && seconds != sameTime && minutes != 1)
+        if(seconds % 25 == 0 && seconds != sameTime && minutes != 1 && RaycastSelect.eyesOpened == true && !ObjectManager.chosingObject == false)
         {
             sameTime = seconds;
             source.clip = whereCouldItBe;
             source.Play();
         }
 
-        if(minutes == 1)
+        if(minutes >= 1)
         {
-            if(!soundPlaying)
+            if(!soundPlaying && !ObjectManager.chosingObject)
             {
                 soundPlaying = true;
                 source.clip = idBetterHurryUp;

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ObjectManager : MonoBehaviour
 {
+    public static bool chosingObject;
     public List<GameObject> pickupables;
     public int RequiredObjects = 5;
 
@@ -19,6 +20,7 @@ public class ObjectManager : MonoBehaviour
 
     void Start ()
     {
+        chosingObject = false;
         source = GetComponent<AudioSource>();
         StartCoroutine(Mom());
     }
@@ -53,9 +55,12 @@ public class ObjectManager : MonoBehaviour
 
     IEnumerator WaitTime()
     {
+        chosingObject = true;
         yield return new WaitForSeconds(2);
         requiredObject.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(1);
         waiting = false;
+        chosingObject = false;
         
     }
 

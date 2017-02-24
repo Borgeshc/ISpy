@@ -9,8 +9,6 @@ public class RaycastSelect : MonoBehaviour
     public static bool eyesOpened;
 
     RaycastHit hit;
-    public Image topEye;
-    public Image bottomEye;
     public GameObject reticleHolder;
     public GameObject backpack;
     Image reticleImage;
@@ -24,60 +22,39 @@ public class RaycastSelect : MonoBehaviour
     public AudioClip foundItem;
     PostProcess.BlinkEffect blinkEffect;
     bool eyesOpening;
-
-    public GameObject startPanel;
     
     Animator anim;
     void Start()
     {
-        startPanel.SetActive(true);
         objectManager = GameObject.Find("GameManager").GetComponent<ObjectManager>();
         source = GetComponent<AudioSource>();
         reticleImage = reticleHolder.GetComponent<Image>();
         reticleHolder.SetActive(false);
         anim = GetComponent<Animator>();
-        blinkEffect = GetComponent<PostProcess.BlinkEffect>();
-        blinkEffect.time = 1;
-        if(!eyesOpening)
-        StartCoroutine(OpenEyes());
+        eyesOpened = false;
+        if(Application.loadedLevel == 1)
+        {
+            blinkEffect = GetComponent<PostProcess.BlinkEffect>();
+            blinkEffect.time = 1;
+            if (!eyesOpening)
+                StartCoroutine(OpenEyes());
+        }
     }
 
     void Update()
     {
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 500))
+        if(eyesOpened)
         {
-            if(hit.transform.tag == "Collectable")
-            {
-                if(!isSelecting)
-                    StartCoroutine(Selecting(hit.transform.gameObject));
-
-                reticleHolder.SetActive(true);
-            }
-            if (hit.transform.tag == "Static")
-            {
-                if (!isSelecting)
-                    StartCoroutine(Selecting());
-
-                reticleHolder.SetActive(true);
-            }
-            if(hit.transform.tag == "StartButton")
-            {
-                if (!isSelecting)
-                    StartCoroutine(Selecting("Game"));
-
-                reticleHolder.SetActive(true);
-            }
+            Looking();
         }
-        else
+        else if (Application.loadedLevel == 0)
         {
-            ResetFill();
-            reticleHolder.SetActive(false);
+            Looking();
         }
     }
 
     IEnumerator Selecting(string scene)
     {
-
         isSelecting = true;
         while (reticleImage.fillAmount < 1)
         {
@@ -120,7 +97,6 @@ public class RaycastSelect : MonoBehaviour
             yield return new WaitForSeconds(.01f);
         }
         isSelecting = false;
-        //Play audio here
     }
 
     void ResetFill()
@@ -132,11 +108,45 @@ public class RaycastSelect : MonoBehaviour
     {
         eyesOpening = true;
 
+        yield return new WaitForSeconds(1);
         anim.SetBool("OpenEyes", true);
 
-        yield return new WaitForSeconds(1f);
-        startPanel.SetActive(false);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
+        Camera.main.targetDisplay = 1;
+        yield return new WaitForSeconds(4);
         eyesOpened = true;
+    }
+
+    void Looking()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 500))
+        {
+            if (hit.transform.tag == "Collectable")
+            {
+                if (!isSelecting)
+                    StartCoroutine(Selecting(hit.transform.gameObject));
+
+                reticleHolder.SetActive(true);
+            }
+            if (hit.transform.tag == "Static")
+            {
+                if (!isSelecting)
+                    StartCoroutine(Selecting());
+
+                reticleHolder.SetActive(true);
+            }
+            if (hit.transform.tag == "StartButton")
+            {
+                if (!isSelecting)
+                    StartCoroutine(Selecting("Game"));
+
+                reticleHolder.SetActive(true);
+            }
+        }
+        else
+        {
+            ResetFill();
+            reticleHolder.SetActive(false);
+        }
     }
 }
