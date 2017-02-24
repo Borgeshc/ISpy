@@ -27,7 +27,6 @@ public class ObjectManager : MonoBehaviour
     {
         if (collectible == requiredObject)
         {
-            print("Ha! I found it!");
             pickupables.Remove(collectible);
             RequiredObjects--;
 
@@ -45,7 +44,7 @@ public class ObjectManager : MonoBehaviour
                 waiting = true;
                 StartCoroutine(WaitTime());
             }
-            print("Now I'm looking for my " + requiredObject.name);
+         //   print("Now I'm looking for my " + requiredObject.name);
             return true;
         }
         else
@@ -74,7 +73,7 @@ public class ObjectManager : MonoBehaviour
     {
         source.clip = mom;
         source.Play();
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
 
         requiredObject = pickupables[Random.Range(0, pickupables.Count)];
         requiredObject.GetComponent<AudioSource>().Play();

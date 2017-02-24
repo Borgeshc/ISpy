@@ -40,7 +40,6 @@ public class Clock : MonoBehaviour
             source.Play();
         }
 
-        print(seconds);
         if(minutes == 1)
         {
             if(!soundPlaying)

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class RaycastSelect : MonoBehaviour
 {
+    public static bool eyesOpened;
+
     RaycastHit hit;
     public Image topEye;
     public Image bottomEye;
@@ -20,14 +22,24 @@ public class RaycastSelect : MonoBehaviour
 
     public AudioClip wrongItem;
     public AudioClip foundItem;
+    PostProcess.BlinkEffect blinkEffect;
+    bool eyesOpening;
 
-
+    public GameObject startPanel;
+    
+    Animator anim;
     void Start()
     {
+        startPanel.SetActive(true);
         objectManager = GameObject.Find("GameManager").GetComponent<ObjectManager>();
         source = GetComponent<AudioSource>();
         reticleImage = reticleHolder.GetComponent<Image>();
         reticleHolder.SetActive(false);
+        anim = GetComponent<Animator>();
+        blinkEffect = GetComponent<PostProcess.BlinkEffect>();
+        blinkEffect.time = 1;
+        if(!eyesOpening)
+        StartCoroutine(OpenEyes());
     }
 
     void Update()
@@ -73,7 +85,8 @@ public class RaycastSelect : MonoBehaviour
             yield return new WaitForSeconds(.01f);
         }
         isSelecting = false;
-        //SceneManager.LoadScene(scene);
+        
+        SceneManager.LoadScene(scene);
     }
     IEnumerator Selecting(GameObject pickupable)
     {
@@ -95,7 +108,6 @@ public class RaycastSelect : MonoBehaviour
         {
             source.clip = wrongItem;
             source.Play();
-            print("That is not the item I was looking for");
         }
     }
 
@@ -114,5 +126,17 @@ public class RaycastSelect : MonoBehaviour
     void ResetFill()
     {
         reticleImage.fillAmount = 0f;
+    }
+
+    IEnumerator OpenEyes()
+    {
+        eyesOpening = true;
+
+        anim.SetBool("OpenEyes", true);
+
+        yield return new WaitForSeconds(1f);
+        startPanel.SetActive(false);
+        yield return new WaitForSeconds(5);
+        eyesOpened = true;
     }
 }
