@@ -16,12 +16,16 @@ public class RaycastSelect : MonoBehaviour
     ObjectManager objectManager;
     GameObject button;
     bool isClosing;
+    AudioSource source;
+
+    public AudioClip wrongItem;
+    public AudioClip foundItem;
 
 
     void Start()
     {
         objectManager = GameObject.Find("GameManager").GetComponent<ObjectManager>();
-
+        source = GetComponent<AudioSource>();
         reticleImage = reticleHolder.GetComponent<Image>();
         reticleHolder.SetActive(false);
     }
@@ -69,7 +73,7 @@ public class RaycastSelect : MonoBehaviour
             yield return new WaitForSeconds(.01f);
         }
         isSelecting = false;
-        SceneManager.LoadScene(scene);
+        //SceneManager.LoadScene(scene);
     }
     IEnumerator Selecting(GameObject pickupable)
     {
@@ -82,10 +86,15 @@ public class RaycastSelect : MonoBehaviour
         isSelecting = false;
 
         if (objectManager.RemoveObject(pickupable))
+        {
+            source.clip = foundItem;
+            source.Play();
             pickupable.transform.position = backpack.transform.position;
+        }
         else
         {
-            //not the item} play the audio
+            source.clip = wrongItem;
+            source.Play();
             print("That is not the item I was looking for");
         }
     }
