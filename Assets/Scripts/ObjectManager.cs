@@ -14,9 +14,11 @@ public class ObjectManager : MonoBehaviour
 
     public AudioClip foundEverything;
     public AudioClip mom;
+    public AudioClip whereCouldItBe;
 
     AudioSource source;
     bool gameEnding;
+    Coroutine whereIsIt;
 
     void Start ()
     {
@@ -32,6 +34,9 @@ public class ObjectManager : MonoBehaviour
             pickupables.Remove(collectible);
             RequiredObjects--;
 
+            if (whereIsIt != null && !source.isPlaying)
+                StopCoroutine(whereIsIt);
+
             if (RequiredObjects <= 0)
             {
                 if(!gameEnding)
@@ -45,6 +50,7 @@ public class ObjectManager : MonoBehaviour
             {
                 waiting = true;
                 StartCoroutine(WaitTime());
+                whereIsIt = StartCoroutine(StillLooking());
             }
          //   print("Now I'm looking for my " + requiredObject.name);
             return true;
@@ -82,6 +88,13 @@ public class ObjectManager : MonoBehaviour
 
         requiredObject = pickupables[Random.Range(0, pickupables.Count)];
         requiredObject.GetComponent<AudioSource>().Play();
+    }
+
+    IEnumerator StillLooking()
+    {
+        yield return new WaitForSeconds(8);
+        source.clip = whereCouldItBe;
+        source.Play();
     }
 }
 

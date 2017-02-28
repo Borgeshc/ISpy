@@ -112,7 +112,7 @@ public class RaycastSelect : MonoBehaviour
         anim.SetBool("OpenEyes", true);
 
         yield return new WaitForSeconds(1);
-        Camera.main.targetDisplay = 1;
+        Camera.main.targetDisplay = 0;
         yield return new WaitForSeconds(4);
         eyesOpened = true;
     }

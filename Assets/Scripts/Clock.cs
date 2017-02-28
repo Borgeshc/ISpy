@@ -22,23 +22,25 @@ public class Clock : MonoBehaviour
 
     void Start()
     {
+        minutes = 0;
+        seconds = 0;
         source = GetComponent<AudioSource>();
         clock.text = hours + ":" + minutes + ":" + seconds;
     }
 
     void Update()
     {
-        timer = Time.time;
+        timer = Time.timeSinceLevelLoad;
 
         minutes = Mathf.FloorToInt(timer / 60F);
         seconds = Mathf.FloorToInt(timer - minutes * 60);
 
-        if(seconds % 25 == 0 && seconds != sameTime && minutes != 1 && RaycastSelect.eyesOpened == true && !ObjectManager.chosingObject == false)
-        {
-            sameTime = seconds;
-            source.clip = whereCouldItBe;
-            source.Play();
-        }
+        //if(seconds % 25 == 0 && seconds != sameTime && minutes != 1 && RaycastSelect.eyesOpened == true && !ObjectManager.chosingObject == false)
+        //{
+        //    sameTime = seconds;
+        //    source.clip = whereCouldItBe;
+        //    source.Play();
+        //}
 
         if(minutes >= 1)
         {
